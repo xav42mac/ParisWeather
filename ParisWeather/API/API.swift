@@ -26,14 +26,14 @@ public class API {
             // Dev Mode
             siteURL = "api.openweathermap.org"
             route = "/data/2.5"
-            consumerKey = "422ff522b7cff24bd80697ecf593b23f"
+            consumerKey = "1c8ad0324074b99148fedd75033828a2"
             consumerSecret = "" //Empty for trial version
             
         } else {
             // Prod Mode
             siteURL = "api.openweathermap.org"
             route = "/data/2.5"
-            consumerKey = "422ff522b7cff24bd80697ecf593b23f"
+            consumerKey = "650d394954a064cb446543f6e6439a4b"
             consumerSecret = "" //Empty for trial version
         }
         
