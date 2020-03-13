@@ -18,20 +18,18 @@ public class API {
     
     private let client : APIClient
     
-    private let parisID : Int = 2968815
-    
     private init() {
         
         if Bundle.main.bundleIdentifier?.contains(".dev") ?? false {
             // Dev Mode
-            siteURL = "api.openweathermap.org"
+            siteURL = "https://api.openweathermap.org"
             route = "/data/2.5"
             consumerKey = "1c8ad0324074b99148fedd75033828a2"
             consumerSecret = "" //Empty for trial version
             
         } else {
             // Prod Mode
-            siteURL = "api.openweathermap.org"
+            siteURL = "https://api.openweathermap.org"
             route = "/data/2.5"
             consumerKey = "650d394954a064cb446543f6e6439a4b"
             consumerSecret = "" //Empty for trial version

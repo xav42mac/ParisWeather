@@ -1,14 +1,15 @@
 //
-//  ViewController.swift
+//  DetailsViewController.swift
 //  ParisWeather
 //
-//  Created by Xav Mac on 11/03/2020.
+//  Created by Xav Mac on 12/03/2020.
 //  Copyright © 2020 ParisWeather. All rights reserved.
 //
 
 import UIKit
 
-class ViewController: UIViewController {
+// MARK: - DetailsViewController
+class DetailsViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -17,4 +18,3 @@ class ViewController: UIViewController {
 
 
 }
-

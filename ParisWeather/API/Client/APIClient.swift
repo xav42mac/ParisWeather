@@ -19,7 +19,7 @@ public class APIClient {
     /**
      Performs a network request using the provided parameters. Returns the result as part of the completion handler. This function also returns the decoded object as part of the response.
      - parameter route: The router being used for the request.
-     - parameter decoder: A JSONDecoder object which can be overriden if required. Defaults to an ISO8601 Date Decoder which is suitable for the majority of response from Stream.
+     - parameter decoder: A JSONDecoder object which can be overriden if required. Defaults to an ISO8601 Date Decoder which is suitable for the majority of response from API.
      - parameter completion: The completion handler used when the request is successful or encounters an error.
      */
     func performRequest<T: Decodable, R: APIConfiguration>(route: R,
@@ -58,13 +58,13 @@ public class APIClient {
      */
     private func printError(_ error: Error?) {
         guard let error = error else { return }
-        print("⚠️ Stream API encountered an exception: \(error.localizedDescription) ⚠️")
+        print("⚠️ API encountered an exception: \(error.localizedDescription) ⚠️")
     }
     
     /**
-     Attempts to decode the error into the StreamError model.
+     Attempts to decode the error into the APIError model.
      - parameter error: The error, in Data format.
-     - returns: An optional StreamError object detailing the error.
+     - returns: An optional APIError object detailing the error.
      */
     private func decodeError(_ error: Data?) -> APIError? {
         guard let error = error else { return nil }
