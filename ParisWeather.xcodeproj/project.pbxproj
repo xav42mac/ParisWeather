@@ -53,6 +53,7 @@
 		41D767D5241AF51100FC3B45 /* DetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41D767D4241AF51100FC3B45 /* DetailsViewController.swift */; };
 		41D767D7241B9AFF00FC3B45 /* DayForecastCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41D767D6241B9AFF00FC3B45 /* DayForecastCell.swift */; };
 		41D767DC241BA98400FC3B45 /* Day.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41D767DB241BA98400FC3B45 /* Day.swift */; };
+		41E45052241C0ABA00863331 /* HomeViewController+UIScrollView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41E45051241C0ABA00863331 /* HomeViewController+UIScrollView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -125,6 +126,7 @@
 		41D767D4241AF51100FC3B45 /* DetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailsViewController.swift; sourceTree = "<group>"; };
 		41D767D6241B9AFF00FC3B45 /* DayForecastCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DayForecastCell.swift; sourceTree = "<group>"; };
 		41D767DB241BA98400FC3B45 /* Day.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Day.swift; sourceTree = "<group>"; };
+		41E45051241C0ABA00863331 /* HomeViewController+UIScrollView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "HomeViewController+UIScrollView.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -212,6 +214,7 @@
 			children = (
 				4105EFAD241944E10057E90C /* HomeViewController.swift */,
 				41CC2CB9241BBB0F00D8049F /* HomeViewController+UICollectionView.swift */,
+				41E45051241C0ABA00863331 /* HomeViewController+UIScrollView.swift */,
 				41CC2CB7241BBA3300D8049F /* HomeViewController+Extension.swift */,
 			);
 			path = Home;
@@ -512,6 +515,7 @@
 				41D767AC241A33FF00FC3B45 /* API.swift in Sources */,
 				41D767BE241A33FF00FC3B45 /* Session.swift in Sources */,
 				41D767AB241A33FF00FC3B45 /* Meta.swift in Sources */,
+				41E45052241C0ABA00863331 /* HomeViewController+UIScrollView.swift in Sources */,
 				41D7679A241A33FF00FC3B45 /* ForecastEndpoint.swift in Sources */,
 				41D767AF241A33FF00FC3B45 /* JSONDecoder+Extension.swift in Sources */,
 				4105EFB4241944E10057E90C /* ParisWeather.xcdatamodeld in Sources */,

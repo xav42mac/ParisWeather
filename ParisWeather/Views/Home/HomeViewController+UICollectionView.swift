@@ -24,13 +24,54 @@ extension HomeViewController: UICollectionViewDelegate, UICollectionViewDataSour
             return UICollectionViewCell()
         }
         
-        cell.dateLabel.text = self.cityForecastPerDay[indexPath.row].day
+        let dayForecast = self.cityForecastPerDay[indexPath.row]
+        var coldestTemp : Double = dayForecast.forecasts.first?.main.temp ?? 0
+        var hotestTemp : Double = dayForecast.forecasts.first?.main.temp ?? 0
         
-        if let lastForecast = self.cityForecastPerDay[indexPath.row].forecasts.first {
-            cell.temperatureLabel.text = self.convertTemp(temp: lastForecast.main.temp,
+        cell.dateLabel.text = self.createDateTime(timestamp: dayForecast.dt,
+                                                  format: "EEEE d MMM yyyy")
+        
+        for forecast in dayForecast.forecasts {
+            
+            if  forecast.main.temp < coldestTemp {
+                coldestTemp = forecast.main.temp
+            } else if forecast.main.temp > hotestTemp {
+                hotestTemp = forecast.main.temp
+            }
+            
+            let temperature = self.convertTemp(temp: forecast.main.temp,
+                                               from: .kelvin,
+                                               to: .celsius)
+            
+            switch forecast.dtTxt.split(separator: " ")[1] {
+            case "00:00:00":
+                cell.midnightTempLabel.text = temperature
+            case "03:00:00":
+                cell.threeHourTempLabel.text = temperature
+            case "06:00:00":
+                cell.sixHourTempLabel.text = temperature
+            case "09:00:00":
+                cell.nineHourTempLabel.text = temperature
+            case "12:00:00":
+                cell.middayTempLabel.text = temperature
+            case "15:00:00":
+                cell.fifteenHourTempLabel.text = temperature
+            case "18:00:00":
+                cell.eighteenHourTempLabel.text = temperature
+            case "21:00:00":
+                cell.twentyoneHourTempLabel.text = temperature
+            default:
+                break
+            }
+        }
+        
+        cell.coldTemperatureLabel.text = self.convertTemp(temp: coldestTemp,
                                                           from: .kelvin,
                                                           to: .celsius)
-        }
+        
+        cell.hotTemperatureLabel.text = self.convertTemp(temp: hotestTemp,
+                                                         from: .kelvin,
+                                                         to: .celsius)
         
         return cell
     }

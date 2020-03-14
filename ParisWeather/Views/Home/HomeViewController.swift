@@ -13,9 +13,14 @@ class HomeViewController: UIViewController {
     
     @IBOutlet weak var cityImageView: UIImageView!
     @IBOutlet weak var cityLabel: UILabel!
+    @IBOutlet weak var citySunriseLabel: UILabel!
+    @IBOutlet weak var citySunsetLabel: UILabel!
+    
+    @IBOutlet weak var dayPageControl: UIPageControl!
+    @IBOutlet weak var dayPageControlTrailingConstraint: NSLayoutConstraint!
     @IBOutlet weak var dayForecastCollectionView: UICollectionView!
     
-    private let parisID : Int = 2968815
+    var cityID : Int = 2968815 // Here Paris ID
     var cityForecast : Forecast?
     var cityForecastPerDay = [Day]()
 
@@ -25,19 +30,10 @@ class HomeViewController: UIViewController {
         
         self.cityImageView.image = getDynamicBackground()
         
-        API.shared.getForecastById(id: parisID) { (result) in
-            
-            if result.isSuccess {
-                if let forecast = result.value {
-                    self.cityForecast = forecast
-                    self.cityForecastPerDay = self.parseForecastListPerDay(list: forecast.list)
-                    self.actualizeDataOnScreen(forecast: forecast)
-                    return
-                }
-            }
-            
-            self.showError(message: result.error?.asServiceError?.errorDescription ?? "Unknown Error")
-        }
+        dayPageControl.transform = self.dayPageControl.transform.rotated(by: .pi/2)
+        dayPageControlTrailingConstraint.constant -= dayPageControl.frame.width
+        
+        self.getForecasts()
     }
 
     override func viewWillAppear(_ animated: Bool) {

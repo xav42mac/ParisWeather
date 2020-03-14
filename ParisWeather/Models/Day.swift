@@ -11,10 +11,12 @@ import Foundation
 // MARK: - Day
 struct Day: Codable {
     let day: String
+    let dt: Int
     var forecasts: [List]
     
-    init(day: String) {
+    init(day: String, dt: Int) {
         self.day = day
+        self.dt = dt
         self.forecasts = []
     }
 }
