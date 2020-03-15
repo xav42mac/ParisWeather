@@ -9,8 +9,9 @@
 import UIKit
 
 // MARK: - HomeViewController
-class HomeViewController: UIViewController {
+class HomeViewController: ViewController {
     
+    // MARK: - IBOutlet
     @IBOutlet weak var cityImageView: UIImageView!
     @IBOutlet weak var cityLabel: UILabel!
     @IBOutlet weak var citySunriseLabel: UILabel!
@@ -20,10 +21,22 @@ class HomeViewController: UIViewController {
     @IBOutlet weak var dayPageControlTrailingConstraint: NSLayoutConstraint!
     @IBOutlet weak var dayForecastCollectionView: UICollectionView!
     
+    // MARK: - IBAction
+    @IBAction func dayPageControlAction(_ sender: Any) {
+        DispatchQueue.main.async {
+            self.dayForecastCollectionView.scrollToItem(at: IndexPath(row: self.dayPageControl.currentPage,
+                                                                      section: 0),
+                                                        at: .top,
+                                                        animated: false)
+        }
+    }
+    
+    // MARK: - Variables
     var cityID : Int = 2968815 // Here Paris ID
     var cityForecast : Forecast?
     var cityForecastPerDay = [Day]()
 
+    // MARK: - Life Cycle
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.

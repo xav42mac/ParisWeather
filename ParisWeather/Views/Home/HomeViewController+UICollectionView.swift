@@ -9,8 +9,9 @@
 import UIKit
 
 // MARK: - HomeViewController -> UICollectionView
-extension HomeViewController: UICollectionViewDelegate, UICollectionViewDataSource {
+extension HomeViewController: UICollectionViewDataSource {
     
+    // MARK: - Data Source
     func collectionView(_ collectionView: UICollectionView,
                         numberOfItemsInSection section: Int) -> Int {
         
@@ -20,7 +21,8 @@ extension HomeViewController: UICollectionViewDelegate, UICollectionViewDataSour
     func collectionView(_ collectionView: UICollectionView,
                         cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         
-        guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "DayForecastCell", for: indexPath) as? DayForecastCell else {
+        guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "DayForecastCell",
+                                                            for: indexPath) as? DayForecastCell else {
             return UICollectionViewCell()
         }
         
@@ -77,19 +79,36 @@ extension HomeViewController: UICollectionViewDelegate, UICollectionViewDataSour
     }
 }
 
+extension HomeViewController: UICollectionViewDelegate {
+    
+    // MARK: - Delegate
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        
+        let storyboard = UIStoryboard(name: "Details", bundle: .main)
+        let controller = storyboard.instantiateViewController(withIdentifier: "DetailsVC") as! DetailsViewController
+            
+        controller.dayForecast = self.cityForecastPerDay[indexPath.row]
+        
+        controller.modalPresentationStyle = .pageSheet
+        controller.modalTransitionStyle = .coverVertical
+        present(controller, animated: true, completion: nil)
+    }
+}
+
 extension HomeViewController: UICollectionViewDelegateFlowLayout {
 
+    // MARK: - Custom Flow Layout
     func collectionView(_ collectionView: UICollectionView,
                         layout collectionViewLayout: UICollectionViewLayout,
                         sizeForItemAt indexPath: IndexPath) -> CGSize {
         let size = collectionView.bounds
-        return CGSize.init(width: size.width, height: size.height)
+        return CGSize(width: size.width, height: size.height)
     }
     
     func collectionView(_ collectionView: UICollectionView,
                         layout collectionViewLayout: UICollectionViewLayout,
                         insetForSectionAt section: Int) -> UIEdgeInsets {
-        return UIEdgeInsets.init(top: 0, left: 0, bottom: 0, right: 0)
+        return UIEdgeInsets(top: 0, left: 0, bottom: 0, right: 0)
     }
     
     func collectionView(_ collectionView: UICollectionView,

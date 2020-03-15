@@ -8,6 +8,7 @@
 
 import UIKit
 
+// MARK: - DayForecastCell
 class DayForecastCell : UICollectionViewCell {
     
     @IBOutlet weak var dateLabel: UILabel!

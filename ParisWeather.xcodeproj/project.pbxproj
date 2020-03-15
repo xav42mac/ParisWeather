@@ -9,7 +9,7 @@
 /* Begin PBXBuildFile section */
 		4105EFAA241944E10057E90C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4105EFA9241944E10057E90C /* AppDelegate.swift */; };
 		4105EFAE241944E10057E90C /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4105EFAD241944E10057E90C /* HomeViewController.swift */; };
-		4105EFB1241944E10057E90C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4105EFAF241944E10057E90C /* Main.storyboard */; };
+		4105EFB1241944E10057E90C /* Home.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4105EFAF241944E10057E90C /* Home.storyboard */; };
 		4105EFB4241944E10057E90C /* ParisWeather.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 4105EFB2241944E10057E90C /* ParisWeather.xcdatamodeld */; };
 		4105EFB6241944E20057E90C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4105EFB5241944E20057E90C /* Assets.xcassets */; };
 		4105EFB9241944E20057E90C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4105EFB7241944E20057E90C /* LaunchScreen.storyboard */; };
@@ -54,6 +54,11 @@
 		41D767D7241B9AFF00FC3B45 /* DayForecastCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41D767D6241B9AFF00FC3B45 /* DayForecastCell.swift */; };
 		41D767DC241BA98400FC3B45 /* Day.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41D767DB241BA98400FC3B45 /* Day.swift */; };
 		41E45052241C0ABA00863331 /* HomeViewController+UIScrollView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41E45051241C0ABA00863331 /* HomeViewController+UIScrollView.swift */; };
+		41E45055241D819200863331 /* Details.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 41E45054241D819200863331 /* Details.storyboard */; };
+		41E45057241E402900863331 /* DetailsViewController+UITableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41E45056241E402900863331 /* DetailsViewController+UITableView.swift */; };
+		41E45059241E42E600863331 /* HourForecastCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41E45058241E42E600863331 /* HourForecastCell.swift */; };
+		41E4505B241E62C100863331 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41E4505A241E62C100863331 /* ViewController.swift */; };
+		41E4505E241E68CB00863331 /* UIImageView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41E4505D241E68CB00863331 /* UIImageView+Extension.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -77,7 +82,7 @@
 		4105EFA6241944E10057E90C /* ParisWeather.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ParisWeather.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4105EFA9241944E10057E90C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		4105EFAD241944E10057E90C /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
-		4105EFB0241944E10057E90C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		4105EFB0241944E10057E90C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Home.storyboard; sourceTree = "<group>"; };
 		4105EFB3241944E10057E90C /* ParisWeather.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = ParisWeather.xcdatamodel; sourceTree = "<group>"; };
 		4105EFB5241944E20057E90C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		4105EFB8241944E20057E90C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -127,6 +132,11 @@
 		41D767D6241B9AFF00FC3B45 /* DayForecastCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DayForecastCell.swift; sourceTree = "<group>"; };
 		41D767DB241BA98400FC3B45 /* Day.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Day.swift; sourceTree = "<group>"; };
 		41E45051241C0ABA00863331 /* HomeViewController+UIScrollView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "HomeViewController+UIScrollView.swift"; sourceTree = "<group>"; };
+		41E45054241D819200863331 /* Details.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Details.storyboard; sourceTree = "<group>"; };
+		41E45056241E402900863331 /* DetailsViewController+UITableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "DetailsViewController+UITableView.swift"; sourceTree = "<group>"; };
+		41E45058241E42E600863331 /* HourForecastCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HourForecastCell.swift; sourceTree = "<group>"; };
+		41E4505A241E62C100863331 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		41E4505D241E68CB00863331 /* UIImageView+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImageView+Extension.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -181,7 +191,7 @@
 				41D767D8241BA91C00FC3B45 /* Models */,
 				41D767D9241BA92D00FC3B45 /* Views */,
 				41D767DA241BA95300FC3B45 /* ModelViews */,
-				4105EFAF241944E10057E90C /* Main.storyboard */,
+				41E4505C241E68AB00863331 /* Extensions */,
 				4105EFB5241944E20057E90C /* Assets.xcassets */,
 				4105EFB7241944E20057E90C /* LaunchScreen.storyboard */,
 				4105EFBA241944E20057E90C /* Info.plist */,
@@ -212,6 +222,7 @@
 		41CC2CB6241BB9C200D8049F /* Home */ = {
 			isa = PBXGroup;
 			children = (
+				4105EFAF241944E10057E90C /* Home.storyboard */,
 				4105EFAD241944E10057E90C /* HomeViewController.swift */,
 				41CC2CB9241BBB0F00D8049F /* HomeViewController+UICollectionView.swift */,
 				41E45051241C0ABA00863331 /* HomeViewController+UIScrollView.swift */,
@@ -367,8 +378,9 @@
 		41D767D9241BA92D00FC3B45 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				41E4505A241E62C100863331 /* ViewController.swift */,
 				41CC2CB6241BB9C200D8049F /* Home */,
-				41D767D4241AF51100FC3B45 /* DetailsViewController.swift */,
+				41E45053241D7B5700863331 /* Details */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -377,8 +389,27 @@
 			isa = PBXGroup;
 			children = (
 				41D767D6241B9AFF00FC3B45 /* DayForecastCell.swift */,
+				41E45058241E42E600863331 /* HourForecastCell.swift */,
 			);
 			path = ModelViews;
+			sourceTree = "<group>";
+		};
+		41E45053241D7B5700863331 /* Details */ = {
+			isa = PBXGroup;
+			children = (
+				41E45054241D819200863331 /* Details.storyboard */,
+				41D767D4241AF51100FC3B45 /* DetailsViewController.swift */,
+				41E45056241E402900863331 /* DetailsViewController+UITableView.swift */,
+			);
+			path = Details;
+			sourceTree = "<group>";
+		};
+		41E4505C241E68AB00863331 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				41E4505D241E68CB00863331 /* UIImageView+Extension.swift */,
+			);
+			path = Extensions;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -487,7 +518,8 @@
 			files = (
 				4105EFB9241944E20057E90C /* LaunchScreen.storyboard in Resources */,
 				4105EFB6241944E20057E90C /* Assets.xcassets in Resources */,
-				4105EFB1241944E10057E90C /* Main.storyboard in Resources */,
+				4105EFB1241944E10057E90C /* Home.storyboard in Resources */,
+				41E45055241D819200863331 /* Details.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -516,6 +548,7 @@
 				41D767BE241A33FF00FC3B45 /* Session.swift in Sources */,
 				41D767AB241A33FF00FC3B45 /* Meta.swift in Sources */,
 				41E45052241C0ABA00863331 /* HomeViewController+UIScrollView.swift in Sources */,
+				41E4505E241E68CB00863331 /* UIImageView+Extension.swift in Sources */,
 				41D7679A241A33FF00FC3B45 /* ForecastEndpoint.swift in Sources */,
 				41D767AF241A33FF00FC3B45 /* JSONDecoder+Extension.swift in Sources */,
 				4105EFB4241944E10057E90C /* ParisWeather.xcdatamodeld in Sources */,
@@ -532,7 +565,9 @@
 				41D767BA241A33FF00FC3B45 /* NetworkSession.swift in Sources */,
 				41D767B1241A33FF00FC3B45 /* Parameters.swift in Sources */,
 				41D767BB241A33FF00FC3B45 /* URLRequestConvertible.swift in Sources */,
+				41E45057241E402900863331 /* DetailsViewController+UITableView.swift in Sources */,
 				41D767BC241A33FF00FC3B45 /* APIClient.swift in Sources */,
+				41E45059241E42E600863331 /* HourForecastCell.swift in Sources */,
 				41D767D7241B9AFF00FC3B45 /* DayForecastCell.swift in Sources */,
 				41D767BD241A33FF00FC3B45 /* APIClientProtocol.swift in Sources */,
 				41D767B6241A33FF00FC3B45 /* Service.swift in Sources */,
@@ -540,6 +575,7 @@
 				41D767AD241A33FF00FC3B45 /* String+Extension.swift in Sources */,
 				41CC2CB8241BBA3300D8049F /* HomeViewController+Extension.swift in Sources */,
 				41D767B2241A33FF00FC3B45 /* Result.swift in Sources */,
+				41E4505B241E62C100863331 /* ViewController.swift in Sources */,
 				41D767AE241A33FF00FC3B45 /* DateFormatter+Extension.swift in Sources */,
 				4105EFAE241944E10057E90C /* HomeViewController.swift in Sources */,
 				4105EFAA241944E10057E90C /* AppDelegate.swift in Sources */,
@@ -589,12 +625,12 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		4105EFAF241944E10057E90C /* Main.storyboard */ = {
+		4105EFAF241944E10057E90C /* Home.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
 				4105EFB0241944E10057E90C /* Base */,
 			);
-			name = Main.storyboard;
+			name = Home.storyboard;
 			sourceTree = "<group>";
 		};
 		4105EFB7241944E20057E90C /* LaunchScreen.storyboard */ = {

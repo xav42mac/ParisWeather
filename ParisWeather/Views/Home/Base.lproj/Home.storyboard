@@ -9,10 +9,10 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Home View Controller-->
+        <!--HomeVC-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="HomeViewController" customModule="ParisWeather" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="HomeVC" title="HomeVC" id="BYZ-38-t0r" customClass="HomeViewController" customModule="ParisWeather" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -294,6 +294,9 @@
                             </collectionView>
                             <pageControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" numberOfPages="1" translatesAutoresizingMaskIntoConstraints="NO" id="s47-5B-QcB">
                                 <rect key="frame" x="387" y="479.5" width="7" height="37"/>
+                                <connections>
+                                    <action selector="dayPageControlAction:" destination="BYZ-38-t0r" eventType="valueChanged" id="RoC-Ad-5lE"/>
+                                </connections>
                             </pageControl>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="HIF-eg-ewp">
                                 <rect key="frame" x="244" y="94" width="150" height="40"/>
@@ -401,4 +404,5 @@
         <image name="sunrise_custom" width="512" height="512"/>
         <image name="sunset_custom" width="512" height="512"/>
     </resources>
+    <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
 </document>
